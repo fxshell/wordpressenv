@@ -33,6 +33,12 @@ Der SSH-Key wurde mit dieser [Anleitung](https://github.com/mc-b/M300/tree/maste
     git init
 to create a new git repository.
 
+#### Konfiguration
+Wird im Repository angezeigt (Von wem dies das).
+
+    git config --global user.name "<username>"
+    git config --global user.email "<e-mail>"
+
 checkout a repository
 create a working copy of a local repository by running the command
     git clone /path/to/repository
