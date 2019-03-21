@@ -1,9 +1,43 @@
 # M300-Services
+----------------------
+
+### Übersicht 
+
+    +---------------------------------------------------------------+
+    ! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.1.1   !                 
+    ! Port: 8080 (192.168.55.1:80)                                  !	
+    !                                                               !	
+    !    +--------------------+          +---------------------+    !
+    !    ! Web Server         !          ! Datenbank Server    !    !       
+    !    ! Host: web01        !          ! Host: db01          !    !
+    !    ! IP: 192.168.1.101  ! <------> ! IP: 192.168.1.100   !    !
+    !    ! Port: 80           !          ! Port 3306           !    !
+    !    ! Nat: 8080          !          ! Nat: -              !    !
+    !    +--------------------+          +---------------------+    !
+    !                                                               !	
+    +---------------------------------------------------------------+
 
 # Envirement Setup
 Git - Versionverwaltung (Zum einfachen download von Git Umgebungen)
 Download: https://git-scm.com/download/win
 Install
+
+### SSH-Key für Client
+Der SSH-Key wurde mit dieser [Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung#ssh-key-erstellen-lokal) erstellt und zum privaten GitHub Account hinzugefügt.
+* Der Public SSH-Key "id_rsa.pub" wurde im GitHub Account hinzugefügt.
+* Der Privat SSH-Key "id_rsa" befindet sich unter "%HOMEPATH%\".ssh"\" ("C:\Users\Till\".ssh"\")
+* 
+# Git Basics
+    create a new repository
+    create a new directory, open it and perform a 
+    git init
+to create a new git repository.
+
+checkout a repository
+create a working copy of a local repository by running the command
+    git clone /path/to/repository
+when using a remote server, your command will be
+    git clone username@host:/path/to/repository
 
 ## Bestehndes Environment starten
     In einem vorhandenem environment sind alle Einstellungen schon vorkonfiguriert. Ganze Umgebungen mit sämtlichen Einst
@@ -78,9 +112,7 @@ Wir geben dem Nutzer www-data noch recursive die Rechte für das Verzechniss.
 
 Danach kopieren wir das vorkonfigurierte wp-config file welches wir über den Shared Ordner hochgeladen haben noch in das richtige Verzeichniss.
 
-Um mit 
-
-
+### Wordpress install im Vagrantfile
 sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd mysql-client  
     cd /var/www/html
     wget -c http://wordpress.org/latest.tar.gz
@@ -94,6 +126,8 @@ sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd
     Hier müssen wir die IP des Datenbank Servers angeben sowie Username und Passwort für den Mysql User den wir erstellt haben.
     
     User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.55.101
+
+### mysql Nutzer erstellen auf datenbank server
 mysql -uroot -pS3cr3tp4ssw0rd <<%EOF%
 	CREATE DATABASE wordpress;
 	CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'securewordpresspw';
@@ -103,6 +137,7 @@ mysql -uroot -pS3cr3tp4ssw0rd <<%EOF%
 	FLUSH PRIVILEGES;
 %EOF%
 
+### Wordpress config file
     /** The name of the database for WordPress */
     define('DB_NAME', 'wordpress');
 
@@ -115,18 +150,6 @@ mysql -uroot -pS3cr3tp4ssw0rd <<%EOF%
     /** MySQL hostname */
     define('DB_HOST', '192.168.1.100');
 
-
-# Git Basics
-    create a new repository
-    create a new directory, open it and perform a 
-    git init
-to create a new git repository.
-
-checkout a repository
-create a working copy of a local repository by running the command
-    git clone /path/to/repository
-when using a remote server, your command will be
-    git clone username@host:/path/to/repository
 
 ## Sicherheitsaspekte sind implementiert
 ### Firewall eingerichtet inkl. Rules
@@ -147,14 +170,9 @@ when using a remote server, your command will be
 | -------------------------|:----------------------:|-----------------:|
 | ubuntu   | vagrant   | root   |
 | ubuntu | root                | root   |
-| centos        | vagrant                   | root  |
-| centos   | root                  | root   |
 | database                      | vagrant                | root |
 | database  | root |    root|
 | web   | vagrant   | root  |
-| web   | root  | root  |
-| webmin    | vagrant   | root  |
-| webmin    | root  | root  |
 | database (MySQL) | root| Zugriff auf alle Datenbanken |
 
 #### database
@@ -173,7 +191,6 @@ when using a remote server, your command will be
 
 ### Persönliche Lernentwicklung
 #### Vergleich Vorwissen - Wissenszuwachs
-Mein Vorwissen ist [hier](https://github.com/chltrx/m300-lb1-widmer#pers%C3%B6nlicher-wissenstand-im-bezug-auf-die-wichtigsten-themen-sind-dokumentiert-linux-virtualisierung-vagrant-versionsverwaltung--github-markdown-systemsicherheit) dokumentiert.
 
 ##### Linux
 Einen grossen Wissenszuwachs bezüglich Linux gibt es nach dieser LB nicht wirklich. Auch neue Bash Commands habe ich nicht wirklich entdeck. Diese LB hat hauptsächlich dazu beigetragen, dass Vorwissen über Linux & Bash wieder aufzufrischen. Dazu bin ich jetzt auch etwas vertrauter mit Linux & Bash.
