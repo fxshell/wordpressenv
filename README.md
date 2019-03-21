@@ -84,3 +84,30 @@ create a working copy of a local repository by running the command
 when using a remote server, your command will be
     git clone username@host:/path/to/repository
 
+## K4 - Sicherheitsaspekte sind implementiert
+### Firewall eingerichtet inkl. Rules
+Die UFW Firewall wurde wie [hier](https://github.com/chltrx/m300-lb1-widmer#zugang-mit-ssh-tunnel-abgesichert) beschrieben eingeschaltet.
+
+#### UFW Rules pro VM
+##### Ubuntu VM (Nicht implementiert)
+
+    ufw enabled
+    ufw default deny incoming
+    ufw default allow outgoing
+    ufw allow ssh
+
+
+#### database
+| Testfall                | Beschreibung | Ergebnis |
+| :-----------------------|:----------------------:|:-----------------------:|
+| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh database? | Die SSH Verbindung funtkioniert einwandfrei. |
+| Update & Upgrade vom OS | Kann das OS geupdated werden? | Ja, die Updates & Upgrades funktionieren einwandfrei. |
+| Zugriff auf die MySQL Datenbank | Kann über das Web-Interface Adminer auf die MySQL Datenbank zugegriffen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+
+#### web
+| Testfall                | Beschreibung | Ergebnis |
+| :-----------------------|:----------------------:|:-----------------------:|
+| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh web? | Die SSH Verbindung funtkioniert einwandfrei. |
+| Update & Upgrade vom OS | Kann das OS geupdated werden? | Ja, die Updates & Upgrades funktionieren einwandfrei. |
+| Zugriff auf das Adminer Web-Interface | Kann das Adminer Web-Interface aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+| Zugriff auf die apache2 Defaultsite | Kann die apache2 Defaultsite aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
