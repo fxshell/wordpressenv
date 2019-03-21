@@ -105,7 +105,7 @@ Vagrant is meant to run with one Vagrantfile per project, and the Vagrantfile is
         Ø Vagrant ssh
 
 ## Wordpress automated install
-Um Wordpress zu installieren muss das LAMP Stack installiert sein.
+Um Wordpress zu installieren muss das LAMP Stack installiert sein. (Alle commands unten.)
 
 Danach ziehen wir die Wordpress Dateien vom Server und entpacken sie im /var/www/html Verzeichniss.
 Wir geben dem Nutzer www-data noch recursive die Rechte für das Verzechniss.
@@ -113,7 +113,8 @@ Wir geben dem Nutzer www-data noch recursive die Rechte für das Verzechniss.
 Danach kopieren wir das vorkonfigurierte wp-config file welches wir über den Shared Ordner hochgeladen haben noch in das richtige Verzeichniss.
 
 ### Wordpress install im Vagrantfile
-sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd mysql-client  
+    
+    sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd mysql-client  
     cd /var/www/html
     wget -c http://wordpress.org/latest.tar.gz
     tar -xzvf latest.tar.gz
@@ -122,20 +123,21 @@ sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd
     # config file kopieren
     cp /var/www/html/wp-config.php /var/www/html/wordpress/wp-config.php
 
-    Inhalt Config file:
-    Hier müssen wir die IP des Datenbank Servers angeben sowie Username und Passwort für den Mysql User den wir erstellt haben.
+Inhalt Config file:
+Hier müssen wir die IP des Datenbank Servers angeben sowie Username und Passwort für den Mysql User den wir erstellt haben.
     
-    User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.55.101
+User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.55.101
 
 ### mysql Nutzer erstellen auf datenbank server
-mysql -uroot -pS3cr3tp4ssw0rd <<%EOF%
+    
+    mysql -uroot -pS3cr3tp4ssw0rd <<%EOF%
 	CREATE DATABASE wordpress;
 	CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'securewordpresspw';
 	GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';
 	CREATE USER 'wordpressuser'@'192.168.1.101' IDENTIFIED BY 'securewordpresspw';
 	GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'192.168.1.101';
 	FLUSH PRIVILEGES;
-%EOF%
+    %EOF%
 
 ### Wordpress config file
     /** The name of the database for WordPress */
