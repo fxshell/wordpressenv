@@ -47,13 +47,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     cp /var/www/html/wp-config.php /var/www/html/wordpress/wp-config.php
     
     # enabling firewall
-    echo "y" | sudo ufw enable
-    sudo ufw default deny incoming
-    sudo ufw default allow outgoing
-    sudo ufw allow 80
-    sudo ufw allow 443
-    sudo ufw allow ssh
-    sudo ufw allow 3306
+   # echo "y" | sudo ufw enable
+    #sudo ufw default deny incoming
+    #sudo ufw default allow outgoing
+    #sudo ufw allow 80
+    #sudo ufw allow 443
+    #sudo ufw allow ssh
+    #sudo ufw allow 3306
 
   
 

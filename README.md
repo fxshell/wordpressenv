@@ -5,7 +5,7 @@ Git - Versionverwaltung (Zum einfachen download von Git Umgebungen)
 Download: https://git-scm.com/download/win
 Install
 
-# Bestehndes Environment starten
+## Bestehndes Environment starten
     In einem vorhandenem environment sind alle Einstellungen schon vorkonfiguriert. Ganze Umgebungen mit sämtlichen Einst
     Git Bash starten
     Repo clonen
@@ -16,7 +16,7 @@ Install
     Login mit:
 	    Ø Vagrant ssh
 
-# Common commands:
+## Common commands:
      box             manages boxes: installation, removal, etc.
      cloud           manages everything related to Vagrant Cloud
      destroy         stops and deletes all traces of the vagrant machine
@@ -70,6 +70,8 @@ Vagrant is meant to run with one Vagrantfile per project, and the Vagrantfile is
     Mit der VM verbinden 
         Ø Vagrant ssh
 
+## Wordpress automated install
+Um Wordpress 
 
 
 # Git Basics
@@ -84,7 +86,7 @@ create a working copy of a local repository by running the command
 when using a remote server, your command will be
     git clone username@host:/path/to/repository
 
-## K4 - Sicherheitsaspekte sind implementiert
+## Sicherheitsaspekte sind implementiert
 ### Firewall eingerichtet inkl. Rules
 Die UFW Firewall wurde wie [hier](https://github.com/chltrx/m300-lb1-widmer#zugang-mit-ssh-tunnel-abgesichert) beschrieben eingeschaltet.
 
@@ -101,13 +103,11 @@ Die UFW Firewall wurde wie [hier](https://github.com/chltrx/m300-lb1-widmer#zuga
 | Testfall                | Beschreibung | Ergebnis |
 | :-----------------------|:----------------------:|:-----------------------:|
 | SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh database? | Die SSH Verbindung funtkioniert einwandfrei. |
-| Update & Upgrade vom OS | Kann das OS geupdated werden? | Ja, die Updates & Upgrades funktionieren einwandfrei. |
 | Zugriff auf die MySQL Datenbank | Kann über das Web-Interface Adminer auf die MySQL Datenbank zugegriffen werden? | Ja, der Zugriff funktioniert einwandfrei. |
 
 #### web
 | Testfall                | Beschreibung | Ergebnis |
 | :-----------------------|:----------------------:|:-----------------------:|
 | SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh web? | Die SSH Verbindung funtkioniert einwandfrei. |
-| Update & Upgrade vom OS | Kann das OS geupdated werden? | Ja, die Updates & Upgrades funktionieren einwandfrei. |
-| Zugriff auf das Adminer Web-Interface | Kann das Adminer Web-Interface aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+| Zugriff auf das Wordpress Web-Interface | Kann das Wordpress Web-Interface aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
 | Zugriff auf die apache2 Defaultsite | Kann die apache2 Defaultsite aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
