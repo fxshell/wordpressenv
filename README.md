@@ -71,7 +71,36 @@ Vagrant is meant to run with one Vagrantfile per project, and the Vagrantfile is
         Ø Vagrant ssh
 
 ## Wordpress automated install
-Um Wordpress
+Um Wordpress zu installieren muss das LAMP Stack installiert sein.
+
+Danach ziehen wir die Wordpress Dateien vom Server und entpacken sie im /var/www/html Verzeichniss.
+Wir geben dem Nutzer www-data noch recursive die Rechte für das Verzechniss.
+
+Danach kopieren wir das vorkonfigurierte wp-config file welches wir über den Shared Ordner hochgeladen haben noch in das richtige Verzeichniss.
+
+
+sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd mysql-client  
+    cd /var/www/html
+    wget -c http://wordpress.org/latest.tar.gz
+    tar -xzvf latest.tar.gz
+    chown -R www-data:www-data /var/www/html/wordpress
+    
+    # config file kopieren
+    cp /var/www/html/wp-config.php /var/www/html/wordpress/wp-config.php
+
+    Inhalt Config file:
+
+    /** The name of the database for WordPress */
+    define('DB_NAME', 'wordpress');
+
+    /** MySQL database username */
+    define('DB_USER', 'wordpressuser');
+
+    /** MySQL database password */
+    define('DB_PASSWORD', 'securewordpresspw');
+
+    /** MySQL hostname */
+    define('DB_HOST', '192.168.1.100');
 
 
 # Git Basics
@@ -88,7 +117,6 @@ when using a remote server, your command will be
 
 ## Sicherheitsaspekte sind implementiert
 ### Firewall eingerichtet inkl. Rules
-Die UFW Firewall wurde wie [hier](https://github.com/chltrx/m300-lb1-widmer#zugang-mit-ssh-tunnel-abgesichert) beschrieben eingeschaltet.
 
 #### UFW Rules pro VM
 #enabling firewall
@@ -100,7 +128,22 @@ Die UFW Firewall wurde wie [hier](https://github.com/chltrx/m300-lb1-widmer#zuga
     sudo ufw allow ssh
     sudo ufw allow 3306
 
-    
+### Benutzer- und Rechtevergabe ist eingerichtet pro VM
+
+| VM                | Benutzer | Recht |
+| -------------------------|:----------------------:|-----------------:|
+| ubuntu   | vagrant   | root   |
+| ubuntu | root                | root   |
+| centos        | vagrant                   | root  |
+| centos   | root                  | root   |
+| database                      | vagrant                | root |
+| database  | root |    root|
+| web   | vagrant   | root  |
+| web   | root  | root  |
+| webmin    | vagrant   | root  |
+| webmin    | root  | root  |
+| database (MySQL) | root| Zugriff auf alle Datenbanken |
+
 #### database
 | Testfall                | Beschreibung | Ergebnis |
 | :-----------------------|:----------------------:|:-----------------------:|

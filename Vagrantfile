@@ -10,6 +10,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
+  
+  config.vm.define "proxy" do |proxy|
+		proxy.vm.box = "ubuntu/xenial64"
+		proxy.vm.hostname = "proxy"
+		proxy.vm.network "private_network", ip: "192.168.40.99"
+		proxy.vm.network "forwarded_port", guest:80, host:5000, auto_correct: true
+		proxy.vm.provider "virtualbox" do |vb|
+			vb.memory = "512"  
+		end
+		proxy.vm.synced_folder "proxy", "/vagrant"  
+		proxy.vm.provision "shell", path: "proxy.sh"
+  end
+  
   config.vm.define "database" do |db|
        db.vm.box = "ubuntu/xenial64"
 	    db.vm.provider "virtualbox" do |vb|
