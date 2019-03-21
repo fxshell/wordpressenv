@@ -71,7 +71,7 @@ Vagrant is meant to run with one Vagrantfile per project, and the Vagrantfile is
         Ø Vagrant ssh
 
 ## Wordpress automated install
-Um Wordpress 
+Um Wordpress
 
 
 # Git Basics
@@ -91,14 +91,16 @@ when using a remote server, your command will be
 Die UFW Firewall wurde wie [hier](https://github.com/chltrx/m300-lb1-widmer#zugang-mit-ssh-tunnel-abgesichert) beschrieben eingeschaltet.
 
 #### UFW Rules pro VM
-##### Ubuntu VM (Nicht implementiert)
+#enabling firewall
+  echo "y" | sudo ufw enable
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+    sudo ufw allow 80
+    sudo ufw allow 443
+    sudo ufw allow ssh
+    sudo ufw allow 3306
 
-    ufw enabled
-    ufw default deny incoming
-    ufw default allow outgoing
-    ufw allow ssh
-
-
+    
 #### database
 | Testfall                | Beschreibung | Ergebnis |
 | :-----------------------|:----------------------:|:-----------------------:|
