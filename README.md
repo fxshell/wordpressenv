@@ -89,7 +89,7 @@ when using a remote server, your command will be
 # Neue Vagrant Umgebung aufsetzen
 ## Basics Vagrant Boxes
 
-vagrant box add https://app.vagrantup.com/ubuntu/boxes/trusty64
+ufwvagrant box add https://app.vagrantup.com/ubuntu/boxes/trusty64
 
 Before you start you need to add new Boxes to your environment. 
 Boxes are the package format for Vagrant environments. A box can be used by anyone on any platform that Vagrant supports to bring up an identical working environment.
@@ -166,7 +166,8 @@ User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
 
 #### UFW Rules pro VM
 #enabling firewall
-  echo "y" | sudo ufw enable
+  
+    echo "y" | sudo ufw enable
     sudo ufw default deny incoming
     sudo ufw default allow outgoing
     sudo ufw allow 80
