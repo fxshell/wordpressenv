@@ -126,10 +126,10 @@ Danach kopieren wir das vorkonfigurierte wp-config file welches wir über den Sh
 Inhalt Config file:
 Hier müssen wir die IP des Datenbank Servers angeben sowie Username und Passwort für den Mysql User den wir erstellt haben.
     
-User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.55.101
+User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
 
 ### mysql Nutzer erstellen auf datenbank server
-    
+
     mysql -uroot -pS3cr3tp4ssw0rd <<%EOF%
 	CREATE DATABASE wordpress;
 	CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'securewordpresspw';
