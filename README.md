@@ -88,6 +88,7 @@ when using a remote server, your command will be
 
 # Neue Vagrant Umgebung aufsetzen
 ## Basics Vagrant Boxes
+
 vagrant box add https://app.vagrantup.com/ubuntu/boxes/trusty64
 
 Before you start you need to add new Boxes to your environment. 
@@ -146,6 +147,7 @@ User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
     %EOF%
 
 ### Wordpress config file
+   
     /** The name of the database for WordPress */
     define('DB_NAME', 'wordpress');
 
