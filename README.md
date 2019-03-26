@@ -240,6 +240,12 @@ UFW wurde wie folgt eingerichtet:
     sudo ufw allow 443
     sudo ufw allow ssh
     sudo ufw allow 3306
+    
+### Zugang mit SSH-Tunnel abgesichert
+Auf die VagrantVMs kommt man nur via SSH. SSH ist, wie der Name schon sagt, standardmässig verschlüsselt (Secure Shell).
+Dazu wird durch Vagrant selber der Stadard SSH Port 22 auf einen anderen freien weitergeleitet, sodass ein potenzieller Angreifer gar nicht erst eine Verbindung aufbauen kann.
+Falls man möchte, kann man auch wie [hier](https://github.com/chltrx/m300-lb1-widmer#k3---vagrant) beschrieben, eine manuelle SSH Verbindung aufbauen und den generierten Private Key angeben.
+Vagrant generiert dazu noch zu jeder neu erstellten VM einen neue Public & Privat Key.
 
 ### Benutzer- und Rechtevergabe ist eingerichtet pro VM
 
@@ -252,7 +258,8 @@ UFW wurde wie folgt eingerichtet:
 | web   | vagrant   | root  |
 | database (MySQL) | root| Zugriff auf alle Datenbanken |
 
-
+### Projekt mit Git und Markdown dokumentiert
+Ja!
 
 ### Persönliche Lernentwicklung
 #### Vergleich Vorwissen - Wissenszuwachs
