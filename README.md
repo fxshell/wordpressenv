@@ -217,7 +217,7 @@ Verzeichnis für die VagrantVMs auf der beschriebenen VM.
 # Neue Vagrant Umgebung aufsetzen
 ## Basics Vagrant Boxes
 
-ufwvagrant box add https://app.vagrantup.com/ubuntu/boxes/trusty64
+vagrant box add https://app.vagrantup.com/ubuntu/boxes/trusty64
 
 Before you start you need to add new Boxes to your environment. 
 Boxes are the package format for Vagrant environments. A box can be used by anyone on any platform that Vagrant supports to bring up an identical working environment.
