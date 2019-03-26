@@ -170,19 +170,26 @@ Ich habe aus dem GitHub M300 Verzeichniss die MMDB synchronsiert und lauffähig.
 
 ## Automatisierte Wordpress installation
 Ganzes Vagrantfile [hier](https://github.com/fxshell/wordpressenv/blob/master/Vagrantfile)
-Um Wordpress zu installieren muss das LAMP Stack installiert sein. (Alle commands unten.)
+Wordpress ist ein freies Content-Management System mit dem es Möglich ist schnell optisch sehr ansprechende Websites zu erstellen.
 
-Danach ziehen wir die Wordpress Dateien vom Server und entpacken sie im /var/www/html Verzeichniss.
-Wir geben dem Nutzer www-data noch recursive die Rechte für das Verzechniss.
+Die Installation wird in folgende Schritte unterteilt:
+	1. Installation des Webservers
+	2. Installation und aufsetzen von MySQL auf dem Database Server.
+	3. Herunterladen von Wordpress
+	4. Kopieren des Config-Files
+	5. Profit!
 
-Danach kopieren wir das vorkonfigurierte wp-config file welches wir über den Shared Ordner hochgeladen haben noch in das richtige Verzeichniss.
 
 ### Wordpress install im Vagrantfile
-    
+    #Installaton des Webservers
     sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd mysql-client  
+    
+    # Herunterladen von Wordpress
     cd /var/www/html
     wget -c http://wordpress.org/latest.tar.gz
+    # entpacken des Verzeichnisses
     tar -xzvf latest.tar.gz
+    # Rechtevergabe an denn www-data User für Zugriff
     chown -R www-data:www-data /var/www/html/wordpress
     
     # config file kopieren
@@ -205,7 +212,7 @@ User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
     %EOF%
 
 ### Wordpress config file
-Das Config file wir im Shared Folder abgelegt und dann per Vagrant file in das richtige Verzeichnis /var/www/html/wordpress verschoben.
+Das Config file wir im Shared Folder abgelegt und dann per Vagrant file in das richtige Verzeichnis */var/www/html/wordpress* verschoben.
 
     /** The name of the database for WordPress */
     define('DB_NAME', 'wordpress');
