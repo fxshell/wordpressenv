@@ -173,11 +173,11 @@ Ganzes Vagrantfile [hier](https://github.com/fxshell/wordpressenv/blob/master/Va
 Wordpress ist ein freies Content-Management System mit dem es Möglich ist schnell optisch sehr ansprechende Websites zu erstellen.
 
 Die Installation wird in folgende Schritte unterteilt:
-	1. Installation des Webservers
-	2. Installation und aufsetzen von MySQL auf dem Database Server.
-	3. Herunterladen von Wordpress
-	4. Kopieren des Config-Files
-	5. Profit!
+1. Installation des Webservers
+2. Installation und aufsetzen von MySQL auf dem Database Server.
+3. Herunterladen von Wordpress
+4. Kopieren des Config-Files
+5. Profit!
 
 
 ### Wordpress install im Vagrantfile
