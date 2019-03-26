@@ -142,22 +142,6 @@ Benutzte Vagrant-Befehle:
 | Zugriff auf die apache2 Defaultsite | Kann die apache2 Defaultsite aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
 
 
-### Eingerichtete Umgebung ist dokumentiert (Umgebungs-Variablen, Netzwerkplan gezeichnet, Sicherheitsaspekte)
-#### Arbeitsumgebung
-
-Ich habe die Umgebung auf meinem Laptop gehostet.
-
-
-##### Spezifikationen der VM
-
-| Komponent                | Zugewiesene Ressourcen |
-| -------------------------|:----------------------:|
-| OS Name		   	| Microsoft Windows 10 Enterprise   |
-| System Manufacturer		| LENOVO                |
-| System SKU		        | ThinkPad T460
-| Processor			| i5-6300U CPU @ 2.40GHz                 |
-	
-
 #### Vagrant Umgebung
 
 Verzeichnis für die VagrantVMs auf der beschriebenen VM.
@@ -184,8 +168,8 @@ Verzeichnis für die VagrantVMs auf der beschriebenen VM.
 
 Ich habe aus dem GitHub M300 Verzeichniss die MMDB synchronsiert und lauffähig.
 
-
-## Wordpress automated install
+## Automatisierte Wordpress installation
+Ganzes Vagrantfile [hier](https://github.com/fxshell/wordpressenv/blob/master/Vagrantfile)
 Um Wordpress zu installieren muss das LAMP Stack installiert sein. (Alle commands unten.)
 
 Danach ziehen wir die Wordpress Dateien vom Server und entpacken sie im /var/www/html Verzeichniss.
