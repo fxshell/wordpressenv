@@ -126,11 +126,27 @@ Benutzte Vagrant-Befehle:
     vagrant hatl            #Stoppt die laufenden VMs.
     vagrant destroy -f      #Stoppt und löscht die laufenden VMs.
     vagrant up --provision  #Änderungen im Vagrantfile werden für die VMs übernommen.
+    
+### Funktionsweise getesten inkl. Dokumentation
+#### database
+| Testfall                | Beschreibung | Ergebnis |
+| :-----------------------|:----------------------:|:-----------------------:|
+| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh database? | Die SSH Verbindung funtkioniert einwandfrei. |
+| Zugriff auf die MySQL Datenbank | Kann über das Web-Interface Adminer auf die MySQL Datenbank zugegriffen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+
+#### web
+| Testfall                | Beschreibung | Ergebnis |
+| :-----------------------|:----------------------:|:-----------------------:|
+| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh web? | Die SSH Verbindung funtkioniert einwandfrei. |
+| Zugriff auf das Wordpress Web-Interface | Kann das Wordpress Web-Interface aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+| Zugriff auf die apache2 Defaultsite | Kann die apache2 Defaultsite aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+
 
 ### Eingerichtete Umgebung ist dokumentiert (Umgebungs-Variablen, Netzwerkplan gezeichnet, Sicherheitsaspekte)
 #### Arbeitsumgebung
 
 Ich habe die Umgebung auf meinem Laptop gehostet.
+
 
 ##### Spezifikationen der VM
 
@@ -220,7 +236,7 @@ Das Config file wir im Shared Folder abgelegt und dann per Vagrant file in das r
     define('DB_HOST', '192.168.1.100');
 
 
-## Sicherheitsaspekte sind implementiert
+## K4 - Sicherheitsaspekte sind implementiert
 ### Firewall eingerichtet inkl. Rules
 
 #### UFW Rules pro VM
@@ -245,18 +261,6 @@ UFW wurde wie folgt eingerichtet:
 | web   | vagrant   | root  |
 | database (MySQL) | root| Zugriff auf alle Datenbanken |
 
-#### database
-| Testfall                | Beschreibung | Ergebnis |
-| :-----------------------|:----------------------:|:-----------------------:|
-| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh database? | Die SSH Verbindung funtkioniert einwandfrei. |
-| Zugriff auf die MySQL Datenbank | Kann über das Web-Interface Adminer auf die MySQL Datenbank zugegriffen werden? | Ja, der Zugriff funktioniert einwandfrei. |
-
-#### web
-| Testfall                | Beschreibung | Ergebnis |
-| :-----------------------|:----------------------:|:-----------------------:|
-| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh web? | Die SSH Verbindung funtkioniert einwandfrei. |
-| Zugriff auf das Wordpress Web-Interface | Kann das Wordpress Web-Interface aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
-| Zugriff auf die apache2 Defaultsite | Kann die apache2 Defaultsite aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
 
 
 ### Persönliche Lernentwicklung
