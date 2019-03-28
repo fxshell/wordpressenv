@@ -27,16 +27,6 @@ Die passende Version von Git-Bash herunterladen und installieren.
 
 #### Konfiguration
 Wird im Repository angezeigt (Von wem dies das).
-
-### Netzwerkplan
-
-    +--------------------+          +--------------------+          +---------------------+
-    ! Proxy Server       !          ! Web Server         !          ! Datenbank Server    !
-    ! Host: proxy        !          ! Host: web          !          ! Host: db            !
-    ! IP: 192.168.40.99  ! <------> ! IP: 192.168.40.100 ! <------> ! IP: 192.168.40.101  !
-    ! Port: 5000         !          ! Port: 80           !          ! Port 3306           !
-    ! Nat: 5000          !          ! Nat: -             !          ! Nat: -              !
-    +--------------------+          +--------------------+          +---------------------+
     
 # Envirement Setup
 Git - Versionverwaltung (Zum einfachen download von Git Umgebungen)
@@ -112,6 +102,17 @@ Das Thema Systemsicherheit habe wir bereits in verschiedenen TBZ- und ÜK-Module
 [TBZ-Modul 182 Systemsicherheit implementieren](https://bscw.tbz.ch/bscw/bscw.cgi/20888214) (BSCW)
 
 ## K3 - Vagrant
+
+### Netzwerkplan
+
+    +--------------------+          +--------------------+          +---------------------+
+    ! Proxy Server       !          ! Web Server         !          ! Datenbank Server    !
+    ! Host: proxy        !          ! Host: web          !          ! Host: db            !
+    ! IP: 192.168.40.99  ! <------> ! IP: 192.168.40.100 ! <------> ! IP: 192.168.40.101  !
+    ! Port: 5000         !          ! Port: 80           !          ! Port 3306           !
+    ! Nat: 5000          !          ! Nat: -             !          ! Nat: -              !
+    +--------------------+          +--------------------+          +---------------------+
+    
 ### Bestehende VW aus Vagrant-Cloud einrichten
 Ins VagrantVM Verzeichnis gehen, dass Vagrantfile erzeuge, die VM erstellen und starten.
 Installiert wird hier Ubuntu Server 16.04 LTS
