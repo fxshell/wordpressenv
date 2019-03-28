@@ -26,11 +26,11 @@ mysql -uroot -pS3cr3tp4ssw0rd <<%EOF%
 # Restart fuer Konfigurationsaenderung
 sudo service mysql restart
 
-# enabling firewall
-  #  echo "y" | sudo ufw enable
-   # sudo ufw default deny incoming
-    #sudo ufw default allow outgoing
-    #sudo ufw allow 80
-    #sudo ufw allow 443
-    #sudo ufw allow ssh
-    #sudo ufw allow 3306
+#enabling firewall
+  echo "y" | sudo ufw enable
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+    sudo ufw allow 80
+    sudo ufw allow 443
+    sudo ufw allow ssh
+    sudo ufw allow 3306

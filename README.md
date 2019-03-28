@@ -1,9 +1,172 @@
-# M300-Services
-----------------------
+# Modul 300 - Leistungsbeurteilung 1
+## Übersicht
+[Aufgabenstellung](https://docs.google.com/document/d/1KllAAPJCIlcV3jMipyCw3mPliOTVDEZAuUSzTxQEypY/edit#heading=h.nt6gsj7ju1fi)<br/>
+[Bewertungsraster](https://docs.google.com/spreadsheets/d/1pYWn2r7XU3TdtXS01yqfUPGO35MyJu1hdMYNpq5i8Fk/edit#gid=1761970523)<br/>
 
-### Übersicht 
+## K1 - Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
+### VirtualBox
+[VirtualBox Download](https://www.virtualbox.org/wiki/Downloads)<br/>
+Virtualbox herunterladen und installieren.<br/>
+Für die Standardinstallation welche mit Vagrant funktioniert benötigt die installation keine weiteren konfigurationen.
 
-    +---------------------------------------------------------------+
+### Vagrant
+[Vagrant Download](https://www.vagrantup.com/downloads.html)<br/>
+Vagrant herunterladen und installieren.<br/>
+Für die Standardinstallation müssen keine weiteren konfigurationen vorgenommen werden.
+* Achtung! Das OS muss nach einer erfolgreichen Installation von Vagrant neugestartet werden.
+
+### Visual Studio Code
+[Visual Studio Code Download](https://code.visualstudio.com/download)<br/>
+Die passende Version von Visual Studio Code herunterladen und installieren.<br/>
+Für die Standardinstallation müssen keine weiteren konfigurationen vorgenommen werden.<br/>
+Sobald im nächsten Schritt der Git-Bash Client installiert wurde, kann dieser innerhalb von Visual Studio Code als Terminal verwendet werden.
+
+### Git-Client / Git-Bash / Git-Desktop
+[Git-Bash Download](https://git-scm.com/downloads)
+Die passende Version von Git-Bash herunterladen und installieren.
+
+#### Konfiguration
+Wird im Repository angezeigt (Von wem dies das).
+
+<<<<<<< HEAD
+   ### Netzwerkplan
+
+    +--------------------+          +--------------------+          +---------------------+
+    ! Proxy Server       !          ! Web Server         !          ! Datenbank Server    !
+    ! Host: proxy        !          ! Host: web          !          ! Host: db            !
+    ! IP: 192.168.40.99  ! <------> ! IP: 192.168.40.100 ! <------> ! IP: 192.168.40.101  !
+    ! Port: 5000         !          ! Port: 80           !          ! Port 3306           !
+    ! Nat: 5000          !          ! Nat: -             !          ! Nat: -              !
+    +--------------------+          +--------------------+          +---------------------+
+    
+# Envirement Setup
+Git - Versionverwaltung (Zum einfachen download von Git Umgebungen)
+Download: https://git-scm.com/download/win
+Install
+=======
+    git config --global user.name "<username>"
+    git config --global user.email "<e-mail>"
+
+### SSH-Key für Client
+Der SSH-Key wurde mit dieser [Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung#ssh-key-erstellen-lokal) erstellt und zum privaten GitHub Account hinzugefügt.
+* Der Public SSH-Key "id_rsa.pub" wurde im GitHub Account hinzugefügt.
+* Der Privat SSH-Key "id_rsa" befindet sich unter "%HOMEPATH%\".ssh"\" ("C:\Users\till\".ssh"\")
+    
+## K2 - Eigene Lernumgebung (PLE) ist eingerichtet
+### GitHub oder Gitlab-Account erstellen
+[Mein GitHub Account](https://github.com/fxshell), das Aktuelle Repository wird ebenfalls auf diesem Account gehostet.
+* Falls noch kein GitHub Account vorhanden ist, kann dieser [hier](https://github.com/join) erstellt werden.
+
+### Git-Client wurde verwendet
+Als Git-Client verwende ich zum einen den, wie zuvor bei K1 beschrieben, [Git-Bash](https://git-scm.com/downloads) Client.<br/>
+Damit ich mir die Git Befehle nicht merken muss, habe ich zusätzlich noch den GitHub Desktop Client installiert.<br/>
+[GitHub Desktop Download](https://desktop.github.com/)
+* Die passenden Version von GitHub Desktop herunterladen und installieren.
+    * Nach der installation muss nur noch der GitHub Account im GitHub Desktop Programm hinterlegt werden.
+
+### Dokumentation ist als Markdown vorhanden
+Ja.
+
+### Markdown-Editor ausgewählt und eingerichtet
+Zum editieren verwende ich [Visual Studio Code](https://code.visualstudio.com/download) und pushe das README.md File via [GitHub Desktop](https://desktop.github.com/) in mein Repository.
+
+### Markdown ist strukturiert
+Ja.
+
+### Persönlicher Wissenstand im Bezug auf die wichtigsten Themen sind dokumentiert (Linux, Virtualisierung, Vagrant, Versionsverwaltung / GitHub, Markdown, Systemsicherheit)
+#### Linux
+Mit Linux habe ich bereits öfters Privat, Geschäftlich und auch in der Schule gearbeitet. Linux Basics behersche ich und kann diese auch anwenden. 
+Mit Linux, besser gesagt mit Ubuntu Server, zu arbeiten ist mir vertraut.
+
+##### Mit folgenden Linux Ditributionen habe ich bereits gearbeitet/verwendet. Privat, Geschäftlich sowie in der Schule.
+* Ubuntu Desktop 12.04 - 18.10
+* Ubuntu Server 12.04 - 18.10
+* Kali Linux 2013 - 2019.1a
+* RHEL 7.2
+
+#### Virtualisierung
+Mit Virtualisierung habe ich zuvor schon öfters gearbeiter. Privat, Geschäftlich sowie in der Schule.
+
+##### Mit folgender Virtualisierungssoftware habe ich bereits öfters gearbeitet:
+* VMware Workstation Player
+* VMware Workstation Pro
+* VMware ESXi
+* VMware vCenter
+
+##### Folgende Virtualisierungssoftware kenne ich/ habe ich ab und zu mal benutzt
+* Oracle Virtual Box
+
+#### Vagrant
+Vagrant habe ich zuvor noch nie benutzt.
+
+#### Versionsverwaltung
+Zur Versionsverwaltung habe ich bis jetzt nur GitHub ab und zu verwendet. Ansosten kenne ich keine weiteren Versionierungstools und habe auch keine weiteren verwendet.
+
+#### GitHub
+GitHub habe ich zuvor schon für ein paar Schulprojekte verwendet aber ansosten verwende ich GitHub für mich Privat oder Geschäftlich nicht wirklich.
+
+#### Markdown
+Ich habe zuvor zwar bereits von Markdown gehört aber wirklich gewusst was es ist habe ich nicht.
+
+#### Systemsicherheit
+Das Thema Systemsicherheit habe wir bereits in verschiedenen TBZ- und ÜK-Modulen behandelt. Auch in TBZ- und ÜK-Module in denen es nicht direkt um Systemsicherheit geht wurde das Thema ab und zu erwähnt/behandelt.
+
+[TBZ-Modul 182 Systemsicherheit implementieren](https://bscw.tbz.ch/bscw/bscw.cgi/20888214) (BSCW)
+
+## K3 - Vagrant
+### Bestehende VW aus Vagrant-Cloud einrichten
+Ins VagrantVM Verzeichnis gehen, dass Vagrantfile erzeuge, die VM erstellen und starten.
+Installiert wird hier Ubuntu Server 16.04 LTS
+
+    cd T:\VagrantVM
+    vagrant box add ubuntu/xenial64
+    vagrant init ubuntu/xenial64
+    vagrant up
+
+SSH Verbindung mit der Vagrant VM herstellen.
+
+    vagrant ssh     #Für die Ubuntu VM
+
+Falls man VirtualBox öffnet sollte man jetzt sehen, dass die VagrantVM am laufen ist.
+
+### Kennt die Vagrant-Befehle
+Benutzte Vagrant-Befehle:
+
+    vagrant box add         #Vagrant-Box von der Vagrant-Cloud hinzufügen.
+    vagrant init            #Vagrantfile erzeugen.
+    vagrant up              #Virtuelle Maschine erstellen & starten.
+    vagrant ssh             #SSH Verbindung zur lokalen Vagrant Box.
+    vagrant ssh-config      #Die aktuelle SSH Konfiguration wird angezeigt.
+    vagrant status          #Zeigt den aktuellen Status der VMs an, ob sie lauf oder nicht usw.
+    vagrant port            #Zeigt die Weitergeleiteten Ports der VMs an. Standardmässig nur SSH 22 auf 2222, falls mehere VMs installiert werden ändert sich die weiterleitung pro VM.
+    vagrant hatl            #Stoppt die laufenden VMs.
+    vagrant destroy -f      #Stoppt und löscht die laufenden VMs.
+    vagrant up --provision  #Änderungen im Vagrantfile werden für die VMs übernommen.
+    
+### Funktionsweise getesten inkl. Dokumentation
+#### database
+| Testfall                | Beschreibung | Ergebnis |
+| :-----------------------|:----------------------:|:-----------------------:|
+| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh database? | Die SSH Verbindung funtkioniert einwandfrei. |
+| Zugriff auf die MySQL Datenbank | Kann über das Web-Interface Adminer auf die MySQL Datenbank zugegriffen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+
+#### web
+| Testfall                | Beschreibung | Ergebnis |
+| :-----------------------|:----------------------:|:-----------------------:|
+| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh web? | Die SSH Verbindung funtkioniert einwandfrei. |
+| Zugriff auf das Wordpress Web-Interface | Kann das Wordpress Web-Interface aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+| Zugriff auf die apache2 Defaultsite | Kann die apache2 Defaultsite aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
+
+
+#### Vagrant Umgebung
+
+Verzeichnis für die VagrantVMs auf der beschriebenen VM.
+
+    C:\Users\TillWigger\Documents\wordpressenv
+
+#### Netzwerkplan der Umgebung
+
+  +---------------------------------------------------------------+
     ! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.1.1   !                 
     ! Port: 8080 (192.168.55.1:80)                                  !	
     !                                                               !	
@@ -17,114 +180,33 @@
     !                                                               !	
     +---------------------------------------------------------------+
 
-# Envirement Setup
-Git - Versionverwaltung (Zum einfachen download von Git Umgebungen)
-Download: https://git-scm.com/download/win
-Install
+#### Andere vorgefertigte VM aufgesetzt
+>>>>>>> 89eb8035883a74b975ad1a54cd3a4cc4c37135d0
 
-### SSH-Key für Client
-Der SSH-Key wurde mit dieser [Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung#ssh-key-erstellen-lokal) erstellt und zum privaten GitHub Account hinzugefügt.
-* Der Public SSH-Key "id_rsa.pub" wurde im GitHub Account hinzugefügt.
-* Der Privat SSH-Key "id_rsa" befindet sich unter "%HOMEPATH%\".ssh"\" ("C:\Users\Till\".ssh"\")
-* 
-# Git Basics
-    create a new repository
-    create a new directory, open it and perform a 
-    git init
-to create a new git repository.
+Ich habe aus dem GitHub M300 Verzeichniss die MMDB synchronsiert und lauffähig.
 
-#### Konfiguration
-Wird im Repository angezeigt (Von wem dies das).
+## Automatisierte Wordpress installation
+Ganzes Vagrantfile [hier](https://github.com/fxshell/wordpressenv/blob/master/Vagrantfile)
+Wordpress ist ein freies Content-Management System mit dem es Möglich ist schnell optisch sehr ansprechende Websites zu erstellen.
 
-    git config --global user.name "<username>"
-    git config --global user.email "<e-mail>"
+Die Installation wird in folgende Schritte unterteilt:
+1. Installation des Webservers
+2. Installation und aufsetzen von MySQL auf dem Database Server.
+3. Herunterladen von Wordpress
+4. Kopieren des Config-Files
+5. Profit!
 
-checkout a repository
-create a working copy of a local repository by running the command
-    git clone /path/to/repository
-when using a remote server, your command will be
-    git clone username@host:/path/to/repository
-
-## Bestehndes Environment starten
-    In einem vorhandenem environment sind alle Einstellungen schon vorkonfiguriert. Ganze Umgebungen mit sämtlichen Einst
-    Git Bash starten
-    Repo clonen
-        Ø git clone https://github.com/fxshell/M300-Services
-        Ø Cd M300-Services
-        Ø Vagrant up
-    Die VM wird gestartet.
-    Login mit:
-	    Ø Vagrant ssh
-
-## Common commands:
-     box             manages boxes: installation, removal, etc.
-     cloud           manages everything related to Vagrant Cloud
-     destroy         stops and deletes all traces of the vagrant machine
-     global-status   outputs status Vagrant environments for this user
-     halt            stops the vagrant machine
-     help            shows the help for a subcommand
-     init            initializes a new Vagrant environment by creating a Vagrantfile
-     login
-     package         packages a running vagrant environment into a box
-     plugin          manages plugins: install, uninstall, update, etc.
-     port            displays information about guest port mappings
-     powershell      connects to machine via powershell remoting
-     provision       provisions the vagrant machine
-     push            deploys code in this environment to a configured destination
-     rdp             connects to machine via RDP
-     reload          restarts vagrant machine, loads new Vagrantfile configuration
-     resume          resume a suspended vagrant machine
-     snapshot        manages snapshots: saving, restoring, etc.
-     ssh             connects to machine via SSH
-     ssh-config      outputs OpenSSH valid configuration to connect to the machine
-     status          outputs status of the vagrant machine
-     suspend         suspends the machine
-     up              starts and provisions the vagrant environment
-     upload          upload to machine via communicator
-     validate        validates the Vagrantfile
-     version         prints current and latest Vagrant version
-     winrm           executes commands on a machine via WinRM
-     winrm-config    outputs WinRM configuration to connect to the machine
-
-# Neue Vagrant Umgebung aufsetzen
-## Basics Vagrant Boxes
-
-ufwvagrant box add https://app.vagrantup.com/ubuntu/boxes/trusty64
-
-Before you start you need to add new Boxes to your environment. 
-Boxes are the package format for Vagrant environments. A box can be used by anyone on any platform that Vagrant supports to bring up an identical working environment.
-The easiest way to use a box is to add a box from the publicly available catalog of Vagrant boxes. You can also add and share your own customized boxes on this website.
-Also you can upload and share your own boxes easily.
-
-## Basics Vagrantfile 
-The primary function of the Vagrantfile is to describe the type of machine required for a project, and how to configure and provision these machines. Vagrantfiles are called Vagrantfiles because the actual literal filename for the file is Vagrantfile (casing does not matter unless your file system is running in a strict case sensitive mode).
-Vagrant is meant to run with one Vagrantfile per project, and the Vagrantfile is supposed to be committed to version control. This allows other developers involved in the project to check out the code, run vagrant up, and be on their way. Vagrantfiles are portable across every platform Vagrant supports.
-    Commands:
-    Vagrant-Box vom Netzwerkshare hinzufügen
-        Ø vagrant box add http://10.1.66.11/vagrant/ubuntu/xenial64.box --name ubuntu/xenial64  
-    Show added Boxed
-        Ø Vagrant box list
-    Vagrantfile erzeugen
-        Ø vagrant init ubuntu/xenial64          
-    Virtuelle Maschine erstellen & starten
-        Ø vagrant up
-    Mit der VM verbinden 
-        Ø Vagrant ssh
-
-## Wordpress automated install
-Um Wordpress zu installieren muss das LAMP Stack installiert sein. (Alle commands unten.)
-
-Danach ziehen wir die Wordpress Dateien vom Server und entpacken sie im /var/www/html Verzeichniss.
-Wir geben dem Nutzer www-data noch recursive die Rechte für das Verzechniss.
-
-Danach kopieren wir das vorkonfigurierte wp-config file welches wir über den Shared Ordner hochgeladen haben noch in das richtige Verzeichniss.
 
 ### Wordpress install im Vagrantfile
-    
+    #Installaton des Webservers
     sudo apt-get -y install php libapache2-mod-php php-curl php-cli php-mysql php-gd mysql-client  
+    
+    # Herunterladen von Wordpress
     cd /var/www/html
     wget -c http://wordpress.org/latest.tar.gz
+    # entpacken des Verzeichnisses
     tar -xzvf latest.tar.gz
+    # Rechtevergabe an denn www-data User für Zugriff
     chown -R www-data:www-data /var/www/html/wordpress
     
     # config file kopieren
@@ -147,7 +229,8 @@ User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
     %EOF%
 
 ### Wordpress config file
-   
+Das Config file wir im Shared Folder abgelegt und dann per Vagrant file in das richtige Verzeichnis */var/www/html/wordpress* verschoben.
+
     /** The name of the database for WordPress */
     define('DB_NAME', 'wordpress');
 
@@ -161,11 +244,11 @@ User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
     define('DB_HOST', '192.168.1.100');
 
 
-## Sicherheitsaspekte sind implementiert
+## K4 - Sicherheitsaspekte sind implementiert
 ### Firewall eingerichtet inkl. Rules
 
 #### UFW Rules pro VM
-#enabling firewall
+UFW wurde wie folgt eingerichtet:
   
     echo "y" | sudo ufw enable
     sudo ufw default deny incoming
@@ -174,6 +257,12 @@ User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
     sudo ufw allow 443
     sudo ufw allow ssh
     sudo ufw allow 3306
+    
+### Zugang mit SSH-Tunnel abgesichert
+Auf die VagrantVMs kommt man nur via SSH. SSH ist, wie der Name schon sagt, standardmässig verschlüsselt (Secure Shell).
+Dazu wird durch Vagrant selber der Stadard SSH Port 22 auf einen anderen freien weitergeleitet, sodass ein potenzieller Angreifer gar nicht erst eine Verbindung aufbauen kann.
+Falls man möchte, kann man auch wie [hier](https://github.com/chltrx/m300-lb1-widmer#k3---vagrant) beschrieben, eine manuelle SSH Verbindung aufbauen und den generierten Private Key angeben.
+Vagrant generiert dazu noch zu jeder neu erstellten VM einen neue Public & Privat Key.
 
 ### Benutzer- und Rechtevergabe ist eingerichtet pro VM
 
@@ -186,19 +275,8 @@ User fuer Remote Zugriff einrichten - aber nur fuer Host web 192.168.1.101
 | web   | vagrant   | root  |
 | database (MySQL) | root| Zugriff auf alle Datenbanken |
 
-#### database
-| Testfall                | Beschreibung | Ergebnis |
-| :-----------------------|:----------------------:|:-----------------------:|
-| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh database? | Die SSH Verbindung funtkioniert einwandfrei. |
-| Zugriff auf die MySQL Datenbank | Kann über das Web-Interface Adminer auf die MySQL Datenbank zugegriffen werden? | Ja, der Zugriff funktioniert einwandfrei. |
-
-#### web
-| Testfall                | Beschreibung | Ergebnis |
-| :-----------------------|:----------------------:|:-----------------------:|
-| SSH Verbindung          | Funktioniert eine SSH-Verbindung zur VM via vagran ssh web? | Die SSH Verbindung funtkioniert einwandfrei. |
-| Zugriff auf das Wordpress Web-Interface | Kann das Wordpress Web-Interface aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
-| Zugriff auf die apache2 Defaultsite | Kann die apache2 Defaultsite aufgerufen werden? | Ja, der Zugriff funktioniert einwandfrei. |
-
+### Projekt mit Git und Markdown dokumentiert
+Ja!
 
 ### Persönliche Lernentwicklung
 #### Vergleich Vorwissen - Wissenszuwachs

@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "proxy" do |proxy|
 		proxy.vm.box = "ubuntu/xenial64"
 		proxy.vm.hostname = "proxy"
-		proxy.vm.network "private_network", ip: "192.168.40.99"
+		proxy.vm.network "private_network", ip: "192.168.1.99"
 		proxy.vm.network "forwarded_port", guest:80, host:5000, auto_correct: true
 		proxy.vm.provider "virtualbox" do |vb|
 			vb.memory = "512"  
