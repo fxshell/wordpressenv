@@ -28,7 +28,7 @@ Die passende Version von Git-Bash herunterladen und installieren.
 #### Konfiguration
 Wird im Repository angezeigt (Von wem dies das).
 
-   ### Netzwerkplan
+### Netzwerkplan
 
     +--------------------+          +--------------------+          +---------------------+
     ! Proxy Server       !          ! Web Server         !          ! Datenbank Server    !
@@ -161,22 +161,6 @@ Benutzte Vagrant-Befehle:
 Verzeichnis für die VagrantVMs auf der beschriebenen VM.
 
     C:\Users\TillWigger\Documents\wordpressenv
-
-#### Netzwerkplan der Umgebung
-
-  +---------------------------------------------------------------+
-    ! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.1.1   !                 
-    ! Port: 8080 (192.168.55.1:80)                                  !	
-    !                                                               !	
-    !    +--------------------+          +---------------------+    !
-    !    ! Web Server         !          ! Datenbank Server    !    !       
-    !    ! Host: web01        !          ! Host: db01          !    !
-    !    ! IP: 192.168.1.101  ! <------> ! IP: 192.168.1.100   !    !
-    !    ! Port: 80           !          ! Port 3306           !    !
-    !    ! Nat: 8080          !          ! Nat: -              !    !
-    !    +--------------------+          +---------------------+    !
-    !                                                               !	
-    +---------------------------------------------------------------+
 
 #### Andere vorgefertigte VM aufgesetzt
 
