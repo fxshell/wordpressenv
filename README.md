@@ -28,7 +28,6 @@ Die passende Version von Git-Bash herunterladen und installieren.
 #### Konfiguration
 Wird im Repository angezeigt (Von wem dies das).
 
-<<<<<<< HEAD
    ### Netzwerkplan
 
     +--------------------+          +--------------------+          +---------------------+
@@ -43,7 +42,6 @@ Wird im Repository angezeigt (Von wem dies das).
 Git - Versionverwaltung (Zum einfachen download von Git Umgebungen)
 Download: https://git-scm.com/download/win
 Install
-=======
     git config --global user.name "<username>"
     git config --global user.email "<e-mail>"
 
@@ -181,7 +179,6 @@ Verzeichnis für die VagrantVMs auf der beschriebenen VM.
     +---------------------------------------------------------------+
 
 #### Andere vorgefertigte VM aufgesetzt
->>>>>>> 89eb8035883a74b975ad1a54cd3a4cc4c37135d0
 
 Ich habe aus dem GitHub M300 Verzeichniss die MMDB synchronsiert und lauffähig.
 
